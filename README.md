@@ -7,6 +7,6 @@ Vista: Es responsable de la presentación de la información al usuario y de la 
 
 Controlador: Es responsable de la comunicación entre la vista y el modelo. El controlador procesa las acciones del usuario y modifica el modelo según corresponda. También actualiza la vista para reflejar los cambios en el modelo.
 
-[![Sistema-MVC.png](https://i.postimg.cc/W31zWtm6/Sistema-MVC.png)](https://postimg.cc/GB6b9L5H)   
+[![Sistema-MVC.png](https://i.postimg.cc/W31zWtm6/Sistema-MVC.png)](https://postimg.cc/GB6b9L5H "Modelo MVC")
 
 La idea detrás del modelo MVC es que cada componente tenga una responsabilidad clara y esté separado de los demás. Esto permite una mayor flexibilidad y facilidad de mantenimiento del código, ya que los cambios en una parte del sistema no afectan necesariamente a las demás partes. Además, la separación de responsabilidades hace que el código sea más fácil de entender y modificar, lo que reduce el tiempo y los costos de desarrollo.
