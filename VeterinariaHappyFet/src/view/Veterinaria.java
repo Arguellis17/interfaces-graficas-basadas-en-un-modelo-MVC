@@ -156,6 +156,7 @@ public class Veterinaria extends javax.swing.JFrame {
 
         txtTamaño.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
+        areaResultados.setEditable(false);
         areaResultados.setBackground(new java.awt.Color(255, 153, 153));
         areaResultados.setColumns(20);
         areaResultados.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
