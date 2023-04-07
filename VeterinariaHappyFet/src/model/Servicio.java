@@ -1,8 +1,12 @@
 
 package model;
 
+/*
+No se a utilizado esta clase D:
+*/
 
 public class Servicio {
+    
     
     private String codigo;
     private String descripcion;
