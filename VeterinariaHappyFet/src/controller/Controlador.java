@@ -50,20 +50,38 @@ public class Controlador implements ActionListener {
             formulario.txtTamaño.setText("");
 
         } else if (evento.getActionCommand().contentEquals("Calcular Servicio")) {
-            // Se hace una conversion a doble ya que el text field recibe un String
-            System.out.println("Estoy funcionando en beneficio");
-            String codigo = formulario.txtCodigo.getText();
+
+            String codigoBusqueda = formulario.txtCodigo.getText();
+
             Mascota mascotaBuscada = null;
             for (int i = 0; i < lista.size(); i++) {
-                if (codigo.equalsIgnoreCase(lista.get(i).getCodigo())) {
+                if (codigoBusqueda.equalsIgnoreCase(lista.get(i).getCodigo())) {
 
                     mascotaBuscada = lista.get(i);
 
                 }
             }
-//            JOptionPane.showMessageDialog(null, alumnoBuscado.verBeneficio(alumnoBuscado.getEdad()));
+
+            // Aquí puedes obtener el valor de los checkbox seleccionados
+            int valorTotalServicio = 0;
+            if (formulario.chkBanioCompleto.isSelected()) {
+                valorTotalServicio += mascotaBuscada.getTamanio().getPrecioBañoCompleto();
+            }
+            if (formulario.chkVacunas.isSelected()) {
+                valorTotalServicio += mascotaBuscada.getTamanio().getPrecioAplicacionVacunas();
+            }
+            if (formulario.chkCortePelo.isSelected()) {
+                valorTotalServicio += mascotaBuscada.getTamanio().getPrecioCortePelo();
+            }
+            if (formulario.chkCorteUñas.isSelected()) {
+                valorTotalServicio += mascotaBuscada.getTamanio().getPrecioCorteUñas();
+            }
+
+            // Imprimir el valor total en el JTextArea
+            formulario.txtAreaResultado.setText("El valor total del servicio es: $" + valorTotalServicio);
 
         } else if (evento.getActionCommand().contentEquals("Mostrar Datos")) {
+
             System.out.println("Estoy funcionando en mostrar datos");
             String codigoBusqueda = formulario.txtCodigo.getText();
             // Creamos una mascota que debemos buscar igualada a vacia, pues aun no sabemos quien es
@@ -90,7 +108,8 @@ public class Controlador implements ActionListener {
                 }
             }
 
-        } else if (evento.getActionCommand().contentEquals("Guardar")) {
+        } else if (evento.getActionCommand()
+                .contentEquals("Guardar")) {
 
             JOptionPane.showMessageDialog(null, "Se guardo a tu mascota correctamente");
             // Obtenmos lo que hay en los text fields y lo asignamos a nuestra variable

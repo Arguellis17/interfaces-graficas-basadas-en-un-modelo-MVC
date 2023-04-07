@@ -36,8 +36,8 @@ public class Veterinaria extends javax.swing.JFrame {
         lblRaza = new javax.swing.JLabel();
         lblTamaño = new javax.swing.JLabel();
         servicio = new javax.swing.JPanel();
-        chkBañoCompleto = new javax.swing.JCheckBox();
-        chkVacuna = new javax.swing.JCheckBox();
+        chkBanioCompleto = new javax.swing.JCheckBox();
+        chkVacunas = new javax.swing.JCheckBox();
         chkCortePelo = new javax.swing.JCheckBox();
         chkCorteUñas = new javax.swing.JCheckBox();
         btnCalcularServicio = new javax.swing.JButton();
@@ -48,7 +48,7 @@ public class Veterinaria extends javax.swing.JFrame {
         txtRaza = new javax.swing.JTextField();
         txtTamaño = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        areaResultados = new javax.swing.JTextArea();
+        txtAreaResultado = new javax.swing.JTextArea();
         Bienvenida = new javax.swing.JPanel();
         btnLimpiar = new javax.swing.JButton();
 
@@ -72,22 +72,22 @@ public class Veterinaria extends javax.swing.JFrame {
         servicio.setBackground(new java.awt.Color(255, 153, 153));
         servicio.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Servicio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
 
-        chkBañoCompleto.setBackground(new java.awt.Color(255, 153, 153));
-        chkBañoCompleto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        chkBañoCompleto.setText("Baño Completo");
-        chkBañoCompleto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        chkBañoCompleto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        chkBañoCompleto.addActionListener(new java.awt.event.ActionListener() {
+        chkBanioCompleto.setBackground(new java.awt.Color(255, 153, 153));
+        chkBanioCompleto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        chkBanioCompleto.setText("Baño Completo");
+        chkBanioCompleto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        chkBanioCompleto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chkBanioCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkBañoCompletoActionPerformed(evt);
+                chkBanioCompletoActionPerformed(evt);
             }
         });
 
-        chkVacuna.setBackground(new java.awt.Color(255, 153, 153));
-        chkVacuna.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        chkVacuna.setText("Vacunas");
-        chkVacuna.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        chkVacuna.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chkVacunas.setBackground(new java.awt.Color(255, 153, 153));
+        chkVacunas.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        chkVacunas.setText("Vacunas");
+        chkVacunas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        chkVacunas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         chkCortePelo.setBackground(new java.awt.Color(255, 153, 153));
         chkCortePelo.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -108,8 +108,8 @@ public class Veterinaria extends javax.swing.JFrame {
             .addGroup(servicioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkBañoCompleto)
-                    .addComponent(chkVacuna))
+                    .addComponent(chkBanioCompleto)
+                    .addComponent(chkVacunas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chkCortePelo)
@@ -121,11 +121,11 @@ public class Veterinaria extends javax.swing.JFrame {
             .addGroup(servicioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkBañoCompleto)
+                    .addComponent(chkBanioCompleto)
                     .addComponent(chkCortePelo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkVacuna)
+                    .addComponent(chkVacunas)
                     .addComponent(chkCorteUñas))
                 .addGap(25, 25, 25))
         );
@@ -156,13 +156,13 @@ public class Veterinaria extends javax.swing.JFrame {
 
         txtTamaño.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
-        areaResultados.setEditable(false);
-        areaResultados.setBackground(new java.awt.Color(255, 153, 153));
-        areaResultados.setColumns(20);
-        areaResultados.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        areaResultados.setRows(5);
-        areaResultados.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resultados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
-        jScrollPane2.setViewportView(areaResultados);
+        txtAreaResultado.setEditable(false);
+        txtAreaResultado.setBackground(new java.awt.Color(255, 153, 153));
+        txtAreaResultado.setColumns(20);
+        txtAreaResultado.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtAreaResultado.setRows(5);
+        txtAreaResultado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resultados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
+        jScrollPane2.setViewportView(txtAreaResultado);
 
         Bienvenida.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "¡Bienvenido!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
 
@@ -207,16 +207,14 @@ public class Veterinaria extends javax.swing.JFrame {
                                 .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblNombre)
                                     .addComponent(lblRaza))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(RegistroLayout.createSequentialGroup()
-                                        .addComponent(txtNombre)
-                                        .addGap(2, 2, 2))))
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(RegistroLayout.createSequentialGroup()
                                 .addComponent(lblTamaño)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTamaño, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(37, 37, 37)
                         .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(servicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -281,9 +279,9 @@ public class Veterinaria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void chkBañoCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkBañoCompletoActionPerformed
+    private void chkBanioCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkBanioCompletoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chkBañoCompletoActionPerformed
+    }//GEN-LAST:event_chkBanioCompletoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,21 +322,21 @@ public class Veterinaria extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel Bienvenida;
     public javax.swing.JPanel Registro;
-    public javax.swing.JTextArea areaResultados;
     public javax.swing.JButton btnCalcularServicio;
     public javax.swing.JButton btnGuardar;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnMostrarDatos;
-    public javax.swing.JCheckBox chkBañoCompleto;
+    public javax.swing.JCheckBox chkBanioCompleto;
     public javax.swing.JCheckBox chkCortePelo;
     public javax.swing.JCheckBox chkCorteUñas;
-    public javax.swing.JCheckBox chkVacuna;
+    public javax.swing.JCheckBox chkVacunas;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JLabel lblCodigo;
     public javax.swing.JLabel lblNombre;
     public javax.swing.JLabel lblRaza;
     public javax.swing.JLabel lblTamaño;
     public javax.swing.JPanel servicio;
+    public javax.swing.JTextArea txtAreaResultado;
     public javax.swing.JTextField txtCodigo;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtRaza;
