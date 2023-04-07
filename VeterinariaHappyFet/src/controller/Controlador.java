@@ -17,6 +17,7 @@ public class Controlador implements ActionListener {
     private Veterinaria formulario = null;
     private Mascota mascota;
     private ArrayList<Mascota> lista = null;
+    private Size tamanio; // Variable que guarda el tamaño de la mascota de la clase enum que es size
 
     public Controlador(Veterinaria formulario, Mascota mascota, ArrayList<Mascota> lista) {
         this.mascota = mascota;
@@ -52,22 +53,67 @@ public class Controlador implements ActionListener {
             // Se hace una conversion a doble ya que el text field recibe un String
             System.out.println("Estoy funcionando en beneficio");
             String codigo = formulario.txtCodigo.getText();
-//            Alumno alumnoBuscado = null;
-//            for (int i = 0; i < lista.size(); i++) {
-//                if (codigo.equalsIgnoreCase(lista.get(i).getCodigo())) {
-//
-//                    alumnoBuscado = lista.get(i);
-//
-//                }
-//            }
+            Mascota mascotaBuscada = null;
+            for (int i = 0; i < lista.size(); i++) {
+                if (codigo.equalsIgnoreCase(lista.get(i).getCodigo())) {
+
+                    mascotaBuscada = lista.get(i);
+
+                }
+            }
 //            JOptionPane.showMessageDialog(null, alumnoBuscado.verBeneficio(alumnoBuscado.getEdad()));
 
         } else if (evento.getActionCommand().contentEquals("Mostrar Datos")) {
             System.out.println("Estoy funcionando en mostrar datos");
+            String codigoBusqueda = formulario.txtCodigo.getText();
+            // Creamos una mascota que debemos buscar igualada a vacia, pues aun no sabemos quien es
+            Mascota mascotaEncontrada = null;
+            // Recorrer la lista para encontrarlo
+            for (int i = 0; i < lista.size(); i++) {
+                // Preguntar si alguna mascota tiene el mismo codigo
+                if (codigoBusqueda.equals(lista.get(i).getCodigo())) {
+                    // Si es asi, nuestra mascota a buscar sera esa
+                    Mascota mascotaBuscar = lista.get(i);
+                    // La mascota encontrada sera igual al la mascota buscada y llamamos al metodo
+                    mascotaEncontrada = mascotaBuscar.buscarMascota(lista, codigoBusqueda);
 
-        } else if (evento.getActionCommand()
-                .contentEquals("Guardar")) {
-            System.out.println("Estoy funcionando en guardar datos");
+                    String codigoEncontrado = mascotaEncontrada.getCodigo();
+                    String nombreEncontrado = mascotaEncontrada.getNombre();
+                    String razaEncontrada = mascotaEncontrada.getRaza();
+                    String tamanioEncontrado = String.valueOf(mascotaEncontrada.getTamanio());
+
+                    formulario.txtCodigo.setText(codigoEncontrado);
+                    formulario.txtNombre.setText(nombreEncontrado);
+                    formulario.txtRaza.setText(razaEncontrada);
+                    formulario.txtTamaño.setText(tamanioEncontrado);
+
+                }
+            }
+
+        } else if (evento.getActionCommand().contentEquals("Guardar")) {
+
+            JOptionPane.showMessageDialog(null, "Se guardo a tu mascota correctamente");
+            // Obtenmos lo que hay en los text fields y lo asignamos a nuestra variable
+
+            String codigo = formulario.txtCodigo.getText();
+            String nombre = formulario.txtNombre.getText();
+            String raza = formulario.txtRaza.getText();
+            // Obtenemos el texto ingresado por el usuario
+            String tamanioTexto = formulario.txtTamaño.getText();
+
+            // Convertimos el texto en un valor de tipo Size
+            if (tamanioTexto.equalsIgnoreCase("PEQUEÑO")) {
+                tamanio = Size.PEQUEÑO;
+            } else if (tamanioTexto.equalsIgnoreCase("MEDIANO")) {
+                tamanio = Size.MEDIANO;
+            } else if (tamanioTexto.equalsIgnoreCase("GRANDE")) {
+                tamanio = Size.GRANDE;
+            }
+
+            // Creamos un objeto llamado alumno y le pasamos nuestros parametros
+            Mascota mascotaNueva = new Mascota(codigo, nombre, raza, tamanio);
+            // Agregamos al alumno
+            lista.add(mascotaNueva);
 
         }
     }

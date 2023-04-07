@@ -10,8 +10,8 @@ public class HappyPet {
     public static void main(String[] args) {
 
         Veterinaria ver = new Veterinaria();
-        Mascota m = new Mascota();
+        Mascota mascota = new Mascota();
         ArrayList<Mascota> lista = new ArrayList();
-        Controlador c = new Controlador(ver, m, lista);
+        Controlador c = new Controlador(ver, mascota, lista);
     }
 }

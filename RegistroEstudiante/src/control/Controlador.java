@@ -59,8 +59,7 @@ public class Controlador implements ActionListener {
             }
             JOptionPane.showMessageDialog(null, alumnoBuscado.verBeneficio(alumnoBuscado.getEdad()));
 
-        } else if (evento.getActionCommand()
-                .contentEquals("Guardar")) {
+        } else if (evento.getActionCommand().contentEquals("Guardar")) {
 
             JOptionPane.showMessageDialog(null, "Se guardo al estudiante correctamente");
             // Obtenmos lo que hay en los text fields y lo asignamos a nuestra variable
