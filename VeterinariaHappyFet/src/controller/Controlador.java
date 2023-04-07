@@ -12,11 +12,10 @@ import model.Servicio;
 import model.Size;
 
 // Para poder usar un checkbox, es necesario añadir un item listener de la clase awt
-public class Controlador implements ActionListener, ItemListener {
+public class Controlador implements ActionListener {
 
     private Veterinaria formulario = null;
     private Mascota mascota;
-    // Lista que nos permita agregar mascotas
     private ArrayList<Mascota> lista = null;
 
     public Controlador(Veterinaria formulario, Mascota mascota, ArrayList<Mascota> lista) {
@@ -73,9 +72,8 @@ public class Controlador implements ActionListener, ItemListener {
         }
     }
 
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+//    @Override
+//    public void itemStateChanged(ItemEvent e) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 }

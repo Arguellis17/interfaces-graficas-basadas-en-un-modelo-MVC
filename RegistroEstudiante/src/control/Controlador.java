@@ -18,10 +18,6 @@ public class Controlador implements ActionListener {
         this.alumno = alumno;
         this.lista = new ArrayList<>();
 
-//        this.formulario.btnGuardar.addActionListener(this);
-//        this.formulario.btnMostrar.addActionListener(this);
-//        this.formulario.btnLimpiar.addActionListener(this);
-//        this.formulario.btnBeneficio.addActionListener(this);
         // Apunta hacia el metodo
         actionListener(this);
     }

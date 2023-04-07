@@ -1,13 +1,16 @@
-
 package model;
 
 public class Mascota {
-    
+
     // Atributos
     private String codigo;
     private String nombre;
     private String raza;
     private String tamanio;
+
+    public Mascota() {
+
+    }
 
     public Mascota(String codigo, String nombre, String raza, String tamanio) {
         this.codigo = codigo;
@@ -50,12 +53,11 @@ public class Mascota {
 
     @Override
     public String toString() {
-        return "Mascota: " +
-                "\nCodigo: " + codigo +
-                "\nNombre: " + nombre + 
-                "\nRaza: " + raza + 
-                "\nTamaño: " + tamanio;
+        return "Mascota: "
+                + "\nCodigo: " + codigo
+                + "\nNombre: " + nombre
+                + "\nRaza: " + raza
+                + "\nTamaño: " + tamanio;
     }
-    
-    
+
 }
