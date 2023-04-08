@@ -41,16 +41,18 @@ public class Controlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent evento) {
 
-        if (evento.getActionCommand().contentEquals("Limpiar")) {
+        if (evento.getActionCommand().contentEquals("LIMPIAR")) {
             System.out.println("Estoy funcionando en limpiar");
             // Obtener lo que hay en la variable dinero
             formulario.txtCodigo.setText("");
             formulario.txtNombre.setText("");
             formulario.txtRaza.setText("");
             formulario.txtTamaño.setText("");
+            formulario.txtAreaResultado.setText("");
+            
 
-        } else if (evento.getActionCommand().contentEquals("Calcular Servicio")) {
-
+        } else if (evento.getActionCommand().contentEquals("CALCULAR SERVICIO")) {
+            // Con el codigo de la mascota se calculan los servicios
             String codigoBusqueda = formulario.txtCodigo.getText();
 
             Mascota mascotaBuscada = null;
@@ -80,7 +82,7 @@ public class Controlador implements ActionListener {
             // Imprimir el valor total en el JTextArea
             formulario.txtAreaResultado.setText("El valor total del servicio es: $" + valorTotalServicio);
 
-        } else if (evento.getActionCommand().contentEquals("Mostrar Datos")) {
+        } else if (evento.getActionCommand().contentEquals("MOSTRAR DATOS")) {
 
             System.out.println("Estoy funcionando en mostrar datos");
             String codigoBusqueda = formulario.txtCodigo.getText();
@@ -104,12 +106,14 @@ public class Controlador implements ActionListener {
                     formulario.txtNombre.setText(nombreEncontrado);
                     formulario.txtRaza.setText(razaEncontrada);
                     formulario.txtTamaño.setText(tamanioEncontrado);
+                    
+                    formulario.txtAreaResultado.setText(lista.get(i).toString());
 
                 }
             }
 
         } else if (evento.getActionCommand()
-                .contentEquals("Guardar")) {
+                .contentEquals("GUARDAR")) {
 
             JOptionPane.showMessageDialog(null, "Se guardo a tu mascota correctamente");
             // Obtenmos lo que hay en los text fields y lo asignamos a nuestra variable

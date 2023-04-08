@@ -17,7 +17,7 @@ public class Formulario extends javax.swing.JFrame {
      */
     public Formulario() {
         initComponents();
-       ImageIcon icon = new ImageIcon(getClass().getResource("icono.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("icono.png"));
         setIconImage(icon.getImage());
         setTitle("Registro Estudiantes UFPS");
         //setResizable(false);
