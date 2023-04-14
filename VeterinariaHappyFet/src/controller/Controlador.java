@@ -112,8 +112,7 @@ public class Controlador implements ActionListener {
                 }
             }
 
-        } else if (evento.getActionCommand()
-                .contentEquals("GUARDAR")) {
+        } else if (evento.getActionCommand().contentEquals("GUARDAR")) {
 
             JOptionPane.showMessageDialog(null, "Se guardo a tu mascota correctamente");
             // Obtenmos lo que hay en los text fields y lo asignamos a nuestra variable
