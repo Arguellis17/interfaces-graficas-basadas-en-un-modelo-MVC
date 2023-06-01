@@ -15,7 +15,7 @@ simplificó el código necesario para acceder a estos valores en el controlador.
 */
 public enum Size {
     
-    // Nota: En los enum, un punto y coma en el ultimo elemento declarado determinada donde terminar las enumeraciones. Actua como un break D:
+    // Nota: En los enum, un punto y coma es el ultimo elemento declarado determinada donde terminar las enumeraciones. Actua como un break D:
     // Dandole valor a los enum
     PEQUEÑO(15000, 5000, 5000, 2000),
     MEDIANO(25000, 5000, 10000, 4000),

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Mascota;
 import view.Veterinaria;
-import model.Servicio;
 import model.Size;
 
 // Para poder usar un checkbox, es necesario añadir un item listener de la clase awt
